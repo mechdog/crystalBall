@@ -16,16 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="dlY-Q9-QkI">
-                                <rect key="frame" x="20" y="196" width="280" height="116"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Cjf-Nw-TfA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="dlY-Q9-QkI">
+                                <rect key="frame" x="20" y="197" width="280" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="jeZ-Tb-FZA"/>
+                                    <constraint firstAttribute="width" constant="280" id="vTc-oL-5UA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9s-nk-MdW">
-                                <rect key="frame" x="30" y="430" width="261" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9s-nk-MdW">
+                                <rect key="frame" x="29" y="501" width="261" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="JSg-tf-AoV"/>
+                                    <constraint firstAttribute="width" constant="261" id="LO5-Lo-6wg"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="button-off">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +50,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kNi-p1-hzV" firstAttribute="top" secondItem="Cjf-Nw-TfA" secondAttribute="bottom" id="7iO-Er-Tum"/>
+                            <constraint firstItem="Cjf-Nw-TfA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="AdV-CP-e3D"/>
+                            <constraint firstAttribute="centerX" secondItem="E9s-nk-MdW" secondAttribute="centerX" id="Bxz-0o-3dI"/>
+                            <constraint firstItem="Cjf-Nw-TfA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IfG-C1-qFi"/>
+                            <constraint firstItem="Cjf-Nw-TfA" firstAttribute="centerX" secondItem="dlY-Q9-QkI" secondAttribute="centerX" id="aY6-A0-iaZ"/>
+                            <constraint firstItem="Cjf-Nw-TfA" firstAttribute="centerY" secondItem="dlY-Q9-QkI" secondAttribute="centerY" constant="29" id="dnx-KO-AB0"/>
+                            <constraint firstItem="kNi-p1-hzV" firstAttribute="top" secondItem="E9s-nk-MdW" secondAttribute="bottom" constant="20" id="mrc-EQ-dWS"/>
+                            <constraint firstAttribute="trailing" secondItem="Cjf-Nw-TfA" secondAttribute="trailing" id="pPw-tw-eYI"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="predictionLabel" destination="dlY-Q9-QkI" id="e5Y-PZ-PV8"/>
@@ -48,6 +70,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="320" height="568"/>
         <image name="button-off" width="261" height="49"/>
         <image name="button-on" width="261" height="47"/>
     </resources>
