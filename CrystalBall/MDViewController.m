@@ -20,10 +20,7 @@
     [super viewDidLoad];
     self.crystalBall= [[MDCrystalBall alloc] init];
     
-    UIImage *backgroundImage = [UIImage imageNamed:@"background"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:backgroundImage];
-    [self.view insertSubview:imageView atIndex:0];
-	// Do any additional setup after loading the view, typically from a nib.
+   	// Do any additional setup after loading the view, typically from a nib.
     
 
 }
