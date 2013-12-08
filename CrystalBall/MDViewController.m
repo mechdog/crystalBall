@@ -32,9 +32,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonPressed {
-    self.predictionLabel.text = [self.crystalBall randomPrediction];
-}
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     self.predictionLabel.text = nil;
@@ -51,5 +48,16 @@
     NSLog(@"Motion Canceled");
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    self.predictionLabel.text= nil;
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+     self.predictionLabel.text= [self.crystalBall randomPrediction];
+}
+
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+}
 
 @end

@@ -31,33 +31,14 @@
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9s-nk-MdW">
-                                <rect key="frame" x="29" y="501" width="261" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="JSg-tf-AoV"/>
-                                    <constraint firstAttribute="width" constant="261" id="LO5-Lo-6wg"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="button-off">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" image="button-on"/>
-                                <state key="highlighted" image="button-on"/>
-                                <connections>
-                                    <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N2l-MN-fge"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kNi-p1-hzV" firstAttribute="top" secondItem="Cjf-Nw-TfA" secondAttribute="bottom" id="7iO-Er-Tum"/>
                             <constraint firstItem="Cjf-Nw-TfA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="AdV-CP-e3D"/>
-                            <constraint firstAttribute="centerX" secondItem="E9s-nk-MdW" secondAttribute="centerX" id="Bxz-0o-3dI"/>
                             <constraint firstItem="Cjf-Nw-TfA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IfG-C1-qFi"/>
                             <constraint firstItem="Cjf-Nw-TfA" firstAttribute="centerX" secondItem="dlY-Q9-QkI" secondAttribute="centerX" id="aY6-A0-iaZ"/>
                             <constraint firstItem="Cjf-Nw-TfA" firstAttribute="centerY" secondItem="dlY-Q9-QkI" secondAttribute="centerY" constant="29" id="dnx-KO-AB0"/>
-                            <constraint firstItem="kNi-p1-hzV" firstAttribute="top" secondItem="E9s-nk-MdW" secondAttribute="bottom" constant="20" id="mrc-EQ-dWS"/>
                             <constraint firstAttribute="trailing" secondItem="Cjf-Nw-TfA" secondAttribute="trailing" id="pPw-tw-eYI"/>
                         </constraints>
                     </view>
@@ -71,8 +52,6 @@
     </scenes>
     <resources>
         <image name="background" width="320" height="568"/>
-        <image name="button-off" width="261" height="49"/>
-        <image name="button-on" width="261" height="47"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

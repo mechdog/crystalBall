@@ -11,7 +11,6 @@
 @class MDCrystalBall;
 
 @interface MDViewController : UIViewController
-- (IBAction)buttonPressed;
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) MDCrystalBall *crystalBall;
 
