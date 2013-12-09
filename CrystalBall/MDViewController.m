@@ -8,16 +8,23 @@
 
 #import "MDViewController.h"
 #import "MDCrystalBall.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface MDViewController ()
-
 @end
 
-@implementation MDViewController
+@implementation MDViewController {
+    SystemSoundID soundEffect;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"crystal_ball" ofType:@"mp3"];
+    NSURL *soundURL= [NSURL fileURLWithPath:soundPath];
+    AudioServicesCreateSystemSoundID(CFBridgingRetain(soundURL), &soundEffect);
+    
     self.crystalBall= [[MDCrystalBall alloc] init];
     
     self.backgroundImageView.animationImages = [[NSArray alloc] initWithObjects:
@@ -98,7 +105,7 @@
 -(void) makePrediction {
     [self.backgroundImageView startAnimating];
     self.predictionLabel.text= [self.crystalBall randomPrediction];
-    
+    AudioServicesPlaySystemSound(soundEffect);
     [UIView animateWithDuration:6.0f animations:^{
     self.predictionLabel.alpha = 1.0f;
     }];
