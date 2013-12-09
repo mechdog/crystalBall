@@ -84,6 +84,7 @@
     self.backgroundImageView.animationDuration = 2.5f;
     self.backgroundImageView.animationRepeatCount =1;
    	// Do any additional setup after loading the view, typically from a nib.
+     self.predictionLabel.alpha = 0.0f;
 
 }
 
@@ -97,6 +98,11 @@
 -(void) makePrediction {
     [self.backgroundImageView startAnimating];
     self.predictionLabel.text= [self.crystalBall randomPrediction];
+    
+    [UIView animateWithDuration:6.0f animations:^{
+    self.predictionLabel.alpha = 1.0f;
+    }];
+    
 }
 
 #pragma mark - motion Event
@@ -120,6 +126,7 @@
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     self.predictionLabel.text= nil;
+    self.predictionLabel.alpha = 0.0f;
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
