@@ -43,6 +43,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="Cjf-Nw-TfA" id="kzD-mE-O7x"/>
                         <outlet property="predictionLabel" destination="dlY-Q9-QkI" id="e5Y-PZ-PV8"/>
                     </connections>
                 </viewController>

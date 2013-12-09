@@ -13,5 +13,8 @@
 @interface MDViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) MDCrystalBall *crystalBall;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
+-(void) makePrediction;
 
 @end
